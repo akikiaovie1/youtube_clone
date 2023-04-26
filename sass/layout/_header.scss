@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // z-index: 1000;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  // justify-content: space-around;
+
+  background-color: $color-primary;
+
+  &__btn {
+    border: none;
+    border-radius: 0;
+
+    background-color: $color-white;
+    height: 1px;
+    width: 1.8rem;
+    margin: 0 2.4rem;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      background-color: $color-white;
+      height: 1px;
+      width: 1.8rem;
+    }
+    &::before {
+      transform: translateY(-0.7rem);
+    }
+    &::after {
+      transform: translateY(0.5rem);
+    }
+  }
+
+  &__logo--box {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-right: auto;
+    position: relative;
+
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      color: gray;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(125%, -20%);
+    }
+  }
+
+  &__logo {
+    height: 2.8rem;
+    width: 2.8rem;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 40%;
+
+    &__input {
+      font-family: inherit;
+      font-size: 1.6rem;
+      background-color: $color-secondary;
+      border: none;
+      color: inherit;
+      padding: 1rem 2rem;
+      border: 1px solid $color-grey-dark;
+
+      border-collapse: collapse;
+      border-radius: 100px 0 0 100px;
+      width: 90%;
+
+      &:focus {
+        outline: none;
+        width: 100%;
+        background-color: $color-secondary;
+      }
+
+      &::-webkit-input-placeholder {
+        font-weight: 400;
+      }
+
+      &__input + &__button {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .searchicon {
+    display: flex;
+    display: block;
+    align-items: center;
+    border: 1px solid $color-grey-dark;
+    border-left: 0;
+    border-radius: 0 20px 20px 0;
+    padding: 0.66rem 2rem;
+    background-color: $color-secondary;
+
+    svg {
+      height: 2.2rem;
+      width: 2.2rem;
+      fill: gray;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    svg {
+      height: 2rem;
+      width: 2rem;
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: $color-grey-dark;
+    }
+  }
+
+  .mic {
+    background-color: $color-grey-dark-3;
+
+    &:hover {
+      background-color: $color-grey-dark;
+    }
+  }
+
+  .profile__photo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+}

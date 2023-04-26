@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px = 62.5%
+}
+
+body {
+  background-color: $color-primary;
+}
+
+.container {
+  margin-top: 4.9rem;
+
+  display: grid;
+  grid-template-columns: 17% 83%;
+  grid-template-rows: minmax(5.6rem, min-content) max-content;
+  // background-color: orangered;
+  height: 100vh;
+}

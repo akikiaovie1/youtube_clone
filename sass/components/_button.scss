@@ -1,0 +1,16 @@
+.btn {
+  display: block;
+  padding: 0.8rem;
+  border-radius: 50%;
+  fill: $color-white;
+  border: none;
+  background-color: $color-primary;
+
+  // &:hover {
+  //   background-color: $color-grey-dark3;
+  // }
+
+  &-1 {
+    margin-right: auto;
+  }
+}
