@@ -1,13 +1,13 @@
 .sidebar {
-  position: fixed;
-  left: 0;
-  width: 18%;
+  // position: fixed;
+  // left: 0;
+  // width: 15%;
   // z-index: 500;
 
   background-color: $color-primary;
   grid-row: 1/-1;
 
-  margin: 0 1rem;
+  margin: 0 2rem;
 
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 
   &::-webkit-scrollbar {
     background-color: $color-grey-dark-5;
-    width: 10px;
+    width: 5px;
   }
 
   &__link:link,

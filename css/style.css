@@ -163,7 +163,7 @@ h2 {
 .main {
   grid-row: 2/3;
   grid-column: 2/-1;
-  margin-left: 3rem;
+  margin-left: 3.2rem;
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -204,19 +204,16 @@ h2 {
       fill: #777; }
 
 .sidebar {
-  position: fixed;
-  left: 0;
-  width: 18%;
   background-color: #0f0f0f;
   grid-row: 1/-1;
-  margin: 0 1rem;
+  margin: 0 2rem;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   margin-top: 3rem; }
   .sidebar::-webkit-scrollbar {
     background-color: #333;
-    width: 10px; }
+    width: 5px; }
   .sidebar__link:link, .sidebar__link:visited {
     display: flex;
     align-items: center;
