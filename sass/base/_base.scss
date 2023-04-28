@@ -23,4 +23,16 @@ body {
   grid-template-rows: minmax(5.6rem, min-content) max-content;
   // background-color: orangered;
   height: 100vh;
+
+  @media (max-width: 80em) {
+    .container {
+      display: grid;
+      grid-template-columns: min-content max-content;
+    }
+    .sidebar {
+      // padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

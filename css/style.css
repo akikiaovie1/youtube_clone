@@ -18,6 +18,13 @@ body {
   grid-template-columns: 17% 83%;
   grid-template-rows: minmax(5.6rem, min-content) max-content;
   height: 100vh; }
+  @media (max-width: 80em) {
+    .container .container {
+      display: grid;
+      grid-template-columns: min-content max-content; }
+    .container .sidebar {
+      display: flex;
+      flex-direction: column; } }
 
 body {
   font-family: "Roboto", Arial, sans-serif;
@@ -164,6 +171,7 @@ h2 {
   grid-row: 2/3;
   grid-column: 2/-1;
   margin-left: 3.2rem;
+  margin-right: 3.2rem;
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -173,6 +181,12 @@ h2 {
   justify-content: start;
   column-gap: 1rem;
   row-gap: 5rem; }
+  @media (max-width: 48em) {
+    .main {
+      grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 37.5em) {
+    .main {
+      grid-template-columns: 1fr; } }
   .main__content-box iframe {
     border-radius: 8px;
     margin-bottom: 1rem; }
@@ -202,15 +216,104 @@ h2 {
       width: 1.2rem;
       margin-left: 0.5rem;
       fill: #777; }
+  .main__content-border {
+    grid-column: 1 /-1;
+    border-top: 4px solid #777; }
+    .main__content-border h2 {
+      font-size: 2.5rem;
+      font-weight: 400; }
+    .main__content-border-box {
+      background-color: #1f1f1f;
+      padding: 1rem 2rem;
+      border: 1px solid #555;
+      border-radius: 8px; }
+      .main__content-border-box-sub {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem; }
+        .main__content-border-box-sub p {
+          font-size: 1.2rem; }
+      .main__content-border-box-sub1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem; }
+        .main__content-border-box-sub1 span {
+          display: inline-block;
+          color: gray;
+          font-weight: 400; }
+      .main__content-border-box .svg__posts {
+        display: flex;
+        align-items: center;
+        transition: all 0.2s; }
+        .main__content-border-box .svg__posts span {
+          margin-right: 2rem; }
+        .main__content-border-box .svg__posts svg {
+          height: 1.8rem;
+          width: 1.8rem;
+          fill: #fff; }
+        .main__content-border-box .svg__posts svg:hover {
+          fill: #777; }
+        .main__content-border-box .svg__posts-1 {
+          margin-right: 0.5rem; }
+        .main__content-border-box .svg__posts-2 {
+          margin-right: auto; }
+        .main__content-border-box .svg__posts-3 {
+          margin-right: 0.5rem; }
+    .main__content-border-img {
+      width: 40%;
+      border-radius: 8px; }
+    .main__content-border-png {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      margin-right: 1rem; }
 
 .sidebar {
   background-color: #0f0f0f;
   grid-row: 1/-1;
-  margin: 0 2rem;
+  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   margin-top: 3rem; }
+  @media (max-width: 37.5em) {
+    .sidebar .sidebar__link-1:link,
+    .sidebar .sidebar__link-1:visited {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 2rem; }
+      .sidebar .sidebar__link-1:link span,
+      .sidebar .sidebar__link-1:visited span {
+        padding: 1rem;
+        margin: 1rem 0; }
+      .sidebar .sidebar__link-1:link img,
+      .sidebar .sidebar__link-1:link svg,
+      .sidebar .sidebar__link-1:visited img,
+      .sidebar .sidebar__link-1:visited svg {
+        margin: 0; }
+    .sidebar a:nth-child(n + 6) {
+      display: none; }
+    .sidebar h2 {
+      display: none; }
+    .sidebar footer {
+      display: none; }
+      .sidebar footer a {
+        display: none; }
+    .sidebar p {
+      display: none; }
+    .sidebar .after,
+    .sidebar .after-1 {
+      display: none; } }
+  @media (max-width: 80em) {
+    .sidebar {
+      margin: 0;
+      overflow-y: hidden;
+      display: flex;
+      flex-direction: column; } }
   .sidebar::-webkit-scrollbar {
     background-color: #333;
     width: 5px; }
